@@ -1,0 +1,195 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: linear-gradient(135deg, #141e30, #243b55);
+    color: white;
+}
+
+.stopwatch-container {
+    width: 100%;
+    max-width: 600px;
+    padding: 35px;
+
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 25px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    font-size: 42px;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    color: #b9c4d0;
+    font-weight: 15px;
+    margin-bottom: 35px;
+}
+
+.time-display {
+    font-size: 64px;
+    font-weight: bold;
+    letter-spacing: 3px;
+
+    margin-bottom: 35px;
+
+    font-variant-numeric: tabular-nums;
+}
+
+.control-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    border: none;
+    border-radius: 12px;
+    padding: 13px 22px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.btn:hover:not(:disabled) {
+    transform: translateY(-2px);
+}
+
+.btn:active:not(:disabled) {
+    transform: scale(0.96);
+}
+
+.start-btn {
+    background: #22c55e;
+    color: white;
+}
+
+.lap-btn {
+    background: #3b82f6;
+    color: white;
+}
+
+.reset-btn {
+    background: #ef4444;
+    color: white;
+}
+
+.btn:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
+
+/* Lap Section */
+
+.lap-section {
+    margin-top: 35px;
+    text-align: left;
+}
+
+.lap-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 15px;
+}
+
+.laps-header h2 {
+    font-size: 20px;
+}
+
+.clear-btn {
+    border: none;
+    background: transparent;
+    color: #ff8b8b;
+
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.laps-list {
+    max-height: 220px;
+    overflow-y: auto;
+}
+
+.empty-message {
+    text-align: center;
+    color: #9ca8b5;
+    padding: 20px;
+}
+
+.lap-item {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 12px 15px;
+    margin-bottom: 8px;
+
+    background: rgba(255, 255, 255, 0.07);
+    border-radius: 10px;
+}
+
+.lap-number {
+    color: #b9c4d0;
+}
+
+.lap-time {
+    font-weight: bold;
+}
+
+/* Mobile Responsive */
+@media (max-width: 500px) {
+    body {
+        padding: 12px;
+    }
+
+    .stopwatch-container {
+        padding: 25px 15px;
+        border-radius: 20px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    .subtitle {
+        font-size: 13px;
+        margin-bottom: 25px;
+    }
+
+    .time-display {
+        font-size: 39px;
+        letter-spacing: 1px;
+    }
+
+    .btn {
+        padding: 11px 16px;
+        font-size: 14px;
+    }
+
+    .control-buttons {
+        gap: 8px;
+    }
+
+    .laps-header h2 {
+        font-size: 18px;
+    }
+}

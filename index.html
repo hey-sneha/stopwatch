@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Stopwatch</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="stopwatch-container">
+
+        <h1>Stopwatch</h1>
+
+        <p class="subtitle">Track your time with ease</p>
+
+        <div class="time-display" id="timeDisplay">
+            00:00:00.00
+        </div>
+
+        <div class="control-buttons">
+
+            <button id="startBtn" class="btn start-btn">
+                ▶ Start
+            </button>
+
+            <button id="lapBtn" class="btn lap-btn" disabled>
+                🏁 Lap
+            </button>
+
+            <button id="resetBtn" class="btn reset-btn">
+                ↻ Reset
+            </button>
+
+        </div>
+
+        <section class="laps-section">
+
+            <div class="laps-header">
+                <h2>Lap Times</h2>
+
+                <button id="clearBtn" class="clear-btn">
+                    Clear
+                </button>
+            </div>
+
+            <div id="lapsList" class="laps-list">
+                <p class="empty-message">
+                    Your lap times will appear here
+                </p>
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
